@@ -67,9 +67,8 @@ public class DocWordCount extends Configured implements Tool {
     	
     	//Filesplit to get the filename
     	
-    	FileSplit fileSplit = (FileSplit)context.getInputSplit();
-		String filename = delimeter+fileSplit.getPath().getName(); 
-
+      FileSplit fileSplit = (FileSplit)context.getInputSplit();
+      String filename = delimeter+fileSplit.getPath().getName(); 
 		
       String line = lineText.toString();
       if (!caseSensitive) {
